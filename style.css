@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Pricedown Bl';
+    src: url('font/PricedownBl-Regular.woff2') format('woff2'),
+        url('font/PricedownBl-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    cursor:url(assets/mouse.png),auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#vidtop-content {
+    top: 0;
+    color: #fff;
+}
+
+.vid-info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    font-family: 'Pricedown Bl';
+    font-weight: 900;
+    font-style: normal;
+    cursor: pointer
+}
+
+.vid-info h1 {
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .vid-info {
+        width: 50%;
+        padding: .5rem;
+    }
+
+    .vid-info h1 {
+        margin-bottom: .2rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .vid-info .acronym {
+        display: none;
+    }
+}
+
+/* AÇILAN MENÜ CSS */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    font-family: 'Pricedown Bl';
+    font-weight: 900; 
+    font-style: normal;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: url(assets/bg.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.ekleme {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    left: 15%;
+    display: flex;
+}
+
+.ekleme .sol {
+    font-family: 'Pricedown Bl';
+    font-weight: 900;
+    font-style: normal;
+    color: #fff;
+    font-size: 100px;
+}
+
+.ekleme .sag {
+    width: 10%;
+    margin-left: auto;
+    margin-top: 30%;
+    margin-right: 25%;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 6px 6px #000000;
+}
+
+.overlay a {
+    line-height:1.6;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f8a5e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    cursor: url(assets/mouse.png),auto;
+    /*background-color: #188746;*/
+}
+
+
+.overlay span:hover {
+    background-color: #188746;
+    position:relative;
+}
+/*
+.overlay span:hover{
+    background-color: #188746;
+}*/
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    color: #999999;
+    cursor: url(assets/mouse.png),auto;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

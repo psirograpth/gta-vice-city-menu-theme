@@ -1,0 +1,46 @@
+<!--
+psirograpth 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>GTA: Vice City</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="video-background">
+        <div class="video-foreground">
+            <div id="player"></div>
+        </div>
+    </div>
+    <div id="menu" class="overlay">
+        <div class="ekleme">
+            <img src="assets/vc_logo.png" style="width:200px" alt="">
+        </div>
+        <audio id="buton" style="visibility: hidden" controls preload="auto">
+            <source src="assets/buton.mp3" controls>
+            </source>
+        </audio>
+        <a href="javascript:void(0)" class="closebtn" onclick="menuKaybet()">&times;</a>
+        <div class="overlay-content">
+            <a href="#"><span> START GAME </span></a>
+            <a href="#"><span> OPTIONS </span></a>
+            <a href="#"><span> QUIT GAME </span></a>
+        </div>
+    </div>
+
+    <div id="vidtop-content">
+        <div class="vid-info" onclick="menuCikar()">
+            <h1>PRESS ESC TO CONTINUE</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<!-- Dont touch my DOM!-->
+
+</html>
